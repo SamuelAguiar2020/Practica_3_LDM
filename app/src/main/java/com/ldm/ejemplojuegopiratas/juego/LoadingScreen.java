@@ -31,9 +31,10 @@ public class LoadingScreen extends Pantalla{
         Assets.barcoabajo = g.newPixmap("tijera_abj.png", PixmapFormat.ARGB4444);
         Assets.barcoderecha = g.newPixmap("tijera_der.png", PixmapFormat.ARGB4444);
         Assets.tripulacion = g.newPixmap("ramo-de-flores.png", PixmapFormat.ARGB4444);
-        Assets.botin1 = g.newPixmap("flor.png", PixmapFormat.ARGB4444);
-        Assets.botin2 = g.newPixmap("lirio.png", PixmapFormat.ARGB4444);
-        Assets.botin3 = g.newPixmap("girasol.png", PixmapFormat.ARGB4444);
+        Assets.flor = g.newPixmap("flor.png", PixmapFormat.ARGB4444);
+        Assets.lirio = g.newPixmap("lirio.png", PixmapFormat.ARGB4444);
+        Assets.girasol = g.newPixmap("girasol.png", PixmapFormat.ARGB4444);
+        Assets.cactus = g.newPixmap("cactus.png", PixmapFormat.ARGB4444);
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.ataque = juego.getAudio().nuevoSonido("corte.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");

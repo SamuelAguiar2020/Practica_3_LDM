@@ -24,9 +24,11 @@ public class Assets {
     public static Pixmap barcoabajo;
     public static Pixmap barcoderecha;
     public static Pixmap tripulacion;
-    public static Pixmap botin1;
-    public static Pixmap botin2;
-    public static Pixmap botin3;
+    public static Pixmap flor;
+    public static Pixmap lirio;
+    public static Pixmap girasol;
+
+    public static Pixmap cactus;
 
     public static Sonido pulsar;
     public static Sonido ataque;

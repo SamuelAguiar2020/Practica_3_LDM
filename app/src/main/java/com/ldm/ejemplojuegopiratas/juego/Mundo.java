@@ -9,7 +9,7 @@ public class Mundo {
     static final float TICK_INICIAL = 0.5f;
     static final float TICK_DECREMENTO = 0.05f;
 
-    public RamoFlores jollyroger;
+    public RamoFlores ramo;
     public Flores botin;
     public boolean finalJuego = false;
     public int puntuacion = 0;
@@ -20,7 +20,7 @@ public class Mundo {
     static float tick = TICK_INICIAL;
 
     public Mundo() {
-        jollyroger = new RamoFlores();
+        ramo = new RamoFlores();
         colocarBotin();
     }
 
@@ -31,9 +31,9 @@ public class Mundo {
             }
         }
 
-        int len = jollyroger.partes.size();
+        int len = ramo.partes.size();
         for (int i = 0; i < len; i++) {
-            Tripulacion parte = jollyroger.partes.get(i);
+            Tripulacion parte = ramo.partes.get(i);
             campos[parte.x][parte.y] = true;
         }
 
@@ -63,17 +63,17 @@ public class Mundo {
 
         while (tiempoTick > tick) {
             tiempoTick -= tick;
-            jollyroger.avance();
-            if (jollyroger.comprobarChoque()) {
+            ramo.avance();
+            if (ramo.comprobarChoque()) {
                 finalJuego = true;
                 return;
             }
 
-            Tripulacion head = jollyroger.partes.get(0);
+            Tripulacion head = ramo.partes.get(0);
             if (head.x == botin.x && head.y == botin.y) {
                 puntuacion += INCREMENTO_PUNTUACION;
-                jollyroger.abordaje();
-                if (jollyroger.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
+                ramo.abordaje();
+                if (ramo.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
                     finalJuego = true;
                     return;
                 } else {
