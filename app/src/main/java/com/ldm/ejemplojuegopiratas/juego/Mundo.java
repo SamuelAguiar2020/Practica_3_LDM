@@ -9,8 +9,8 @@ public class Mundo {
     static final float TICK_INICIAL = 0.5f;
     static final float TICK_DECREMENTO = 0.05f;
 
-    public JollyRoger jollyroger;
-    public Botin botin;
+    public RamoFlores jollyroger;
+    public Flores botin;
     public boolean finalJuego = false;
     public int puntuacion = 0;
 
@@ -20,7 +20,7 @@ public class Mundo {
     static float tick = TICK_INICIAL;
 
     public Mundo() {
-        jollyroger = new JollyRoger();
+        jollyroger = new RamoFlores();
         colocarBotin();
     }
 
@@ -51,7 +51,7 @@ public class Mundo {
                 }
             }
         }
-        botin = new Botin(botinX, botinY, random.nextInt(3));
+        botin = new Flores(botinX, botinY, random.nextInt(3));
     }
 
     public void update(float deltaTime) {

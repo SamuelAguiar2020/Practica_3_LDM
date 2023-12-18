@@ -7,8 +7,8 @@ import com.ldm.ejemplojuegopiratas.Graficos;
 import com.ldm.ejemplojuegopiratas.Input.TouchEvent;
 import com.ldm.ejemplojuegopiratas.Pantalla;
 
-public class PantallaAyuda3 extends Pantalla {
-    public PantallaAyuda3(Juego juego) {
+public class PantallaAyuda4 extends Pantalla {
+    public PantallaAyuda4(Juego juego) {
         super(juego);
     }
 
@@ -22,7 +22,7 @@ public class PantallaAyuda3 extends Pantalla {
             TouchEvent event = touchEvents.get(i);
             if(event.type == TouchEvent.TOUCH_UP) {
                 if(event.x > 256 && event.y > 416 ) {
-                    juego.setScreen(new PantallaAyuda4(juego));
+                    juego.setScreen(new MainMenuScreen(juego));
                     if(Configuraciones.sonidoHabilitado)
                         Assets.pulsar.play(1);
                     return;
@@ -35,7 +35,7 @@ public class PantallaAyuda3 extends Pantalla {
     public void present(float deltaTime) {
         Graficos g = juego.getGraphics();
         g.drawPixmap(Assets.fondo, 0, 0);
-        g.drawPixmap(Assets.ayuda3, 64, 100);
+        g.drawPixmap(Assets.ayuda4, 64, 100);
         g.drawPixmap(Assets.botones, 256, 416, 0, 128, 64, 64);
     }
 

@@ -144,17 +144,17 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        JollyRoger jollyroger = mundo.jollyroger;
+        RamoFlores jollyroger = mundo.jollyroger;
         Tripulacion head = jollyroger.partes.get(0);
-        Botin botin = mundo.botin;
+        Flores botin = mundo.botin;
 
 
         Pixmap stainPixmap = null;
-        if(botin.tipo== Botin.TIPO_1)
+        if(botin.tipo== Flores.TIPO_1)
             stainPixmap = Assets.botin1;
-        if(botin.tipo == Botin.TIPO_2)
+        if(botin.tipo == Flores.TIPO_2)
             stainPixmap = Assets.botin2;
-        if(botin.tipo == Botin.TIPO_3)
+        if(botin.tipo == Flores.TIPO_3)
             stainPixmap = Assets.botin3;
         int x = botin.x * 32;
         int y = botin.y * 32;
@@ -169,13 +169,13 @@ public class PantallaJuego extends Pantalla {
         }
 
         Pixmap headPixmap = null;
-        if(jollyroger.direccion == JollyRoger.ARRIBA)
+        if(jollyroger.direccion == RamoFlores.ARRIBA)
             headPixmap = Assets.barcoarriba;
-        if(jollyroger.direccion == JollyRoger.IZQUIERDA)
+        if(jollyroger.direccion == RamoFlores.IZQUIERDA)
             headPixmap = Assets.barcoizquierda;
-        if(jollyroger.direccion == JollyRoger.ABAJO)
+        if(jollyroger.direccion == RamoFlores.ABAJO)
             headPixmap = Assets.barcoabajo;
-        if(jollyroger.direccion == JollyRoger.DERECHA)
+        if(jollyroger.direccion == RamoFlores.DERECHA)
             headPixmap = Assets.barcoderecha;
         x = head.x * 32 + 16;
         y = head.y * 32 + 16;

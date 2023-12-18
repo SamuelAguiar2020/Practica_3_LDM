@@ -3,7 +3,7 @@ package com.ldm.ejemplojuegopiratas.juego;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JollyRoger {
+public class RamoFlores {
     public static final int ARRIBA = 0;
     public static final int IZQUIERDA= 1;
     public static final int ABAJO = 2;
@@ -12,7 +12,7 @@ public class JollyRoger {
     public List<Tripulacion> partes = new ArrayList<Tripulacion>();
     public int direccion;
 
-    public JollyRoger() {
+    public RamoFlores() {
         direccion = ARRIBA;
         partes.add(new Tripulacion(5, 6));
         partes.add(new Tripulacion(5, 7));
