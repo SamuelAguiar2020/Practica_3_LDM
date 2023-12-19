@@ -23,7 +23,7 @@ public class Assets {
     public static Pixmap barcoizquierda;
     public static Pixmap barcoabajo;
     public static Pixmap barcoderecha;
-    public static Pixmap tripulacion;
+    public static Pixmap ramo;
     public static Pixmap flor;
     public static Pixmap lirio;
     public static Pixmap girasol;

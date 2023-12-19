@@ -30,7 +30,7 @@ public class LoadingScreen extends Pantalla{
         Assets.barcoizquierda = g.newPixmap("tijera_izq.png", PixmapFormat.ARGB4444);
         Assets.barcoabajo = g.newPixmap("tijera_abj.png", PixmapFormat.ARGB4444);
         Assets.barcoderecha = g.newPixmap("tijera_der.png", PixmapFormat.ARGB4444);
-        Assets.tripulacion = g.newPixmap("ramo-de-flores.png", PixmapFormat.ARGB4444);
+        Assets.ramo = g.newPixmap("ramo-de-flores.png", PixmapFormat.ARGB4444);
         Assets.flor = g.newPixmap("flor.png", PixmapFormat.ARGB4444);
         Assets.lirio = g.newPixmap("lirio.png", PixmapFormat.ARGB4444);
         Assets.girasol = g.newPixmap("girasol.png", PixmapFormat.ARGB4444);

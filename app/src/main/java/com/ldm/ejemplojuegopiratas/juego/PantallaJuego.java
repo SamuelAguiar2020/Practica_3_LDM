@@ -61,10 +61,10 @@ public class PantallaJuego extends Pantalla {
             }
             if(event.type == TouchEvent.TOUCH_DOWN) {
                 if(event.x < 64 && event.y > 416) {
-                    mundo.jollyroger.girarIzquierda();
+                    mundo.ramo.girarIzquierda();
                 }
                 if(event.x > 256 && event.y > 416) {
-                    mundo.jollyroger.girarDerecha();
+                    mundo.ramo.girarDerecha();
                 }
             }
         }
@@ -144,18 +144,18 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        RamoFlores jollyroger = mundo.jollyroger;
+        RamoFlores jollyroger = mundo.ramo;
         Tripulacion head = jollyroger.partes.get(0);
         Flores botin = mundo.botin;
 
 
         Pixmap stainPixmap = null;
         if(botin.tipo== Flores.TIPO_1)
-            stainPixmap = Assets.botin1;
+            stainPixmap = Assets.flor;
         if(botin.tipo == Flores.TIPO_2)
-            stainPixmap = Assets.botin2;
+            stainPixmap = Assets.lirio;
         if(botin.tipo == Flores.TIPO_3)
-            stainPixmap = Assets.botin3;
+            stainPixmap = Assets.girasol;
         int x = botin.x * 32;
         int y = botin.y * 32;
         g.drawPixmap(stainPixmap, x, y);
@@ -165,7 +165,7 @@ public class PantallaJuego extends Pantalla {
             Tripulacion part = jollyroger.partes.get(i);
             x = part.x * 32;
             y = part.y * 32;
-            g.drawPixmap(Assets.tripulacion, x, y);
+            g.drawPixmap(Assets.ramo, x, y);
         }
 
         Pixmap headPixmap = null;
