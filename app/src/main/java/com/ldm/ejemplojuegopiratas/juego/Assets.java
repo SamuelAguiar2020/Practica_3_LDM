@@ -36,4 +36,5 @@ public class Assets {
     public static Sonido ataque;
     public static Sonido derrota;
 
+    public static Pixmap ayuda6;
 }
