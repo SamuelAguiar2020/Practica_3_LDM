@@ -78,9 +78,9 @@ public class RamoFlores {
     }
 
     public void dejarFlor() {
-        //if(partes.size()>0){
-        //    partes.remove(partes.size()-1);
-        //}
+        if(partes.size()>0){
+            partes.remove(partes.size()-1);
+        }
     }
 }
 
