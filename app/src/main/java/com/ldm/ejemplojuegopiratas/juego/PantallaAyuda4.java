@@ -36,7 +36,7 @@ public class PantallaAyuda4 extends Pantalla {
         Graficos g = juego.getGraphics();
         g.drawPixmap(Assets.fondo, 0, 0);
         g.drawPixmap(Assets.ayuda4, 64, 100);
-        g.drawPixmap(Assets.botones, 256, 416, 0, 128, 64, 64);
+        g.drawPixmap(Assets.botones, 256, 416, 0, 64, 64, 64);
     }
 
     @Override
