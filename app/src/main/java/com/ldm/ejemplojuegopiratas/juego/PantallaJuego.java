@@ -19,11 +19,13 @@ public class PantallaJuego extends Pantalla {
     EstadoJuego estado = EstadoJuego.Preparado;
     Mundo mundo;
     int antiguaPuntuacion = 0;
+    int antiguoNumPartes=0;
     String puntuacion = "0";
 
     public PantallaJuego(Juego juego) {
         super(juego);
         mundo = new Mundo();
+        antiguoNumPartes=mundo.ramo.partes.size();
     }
 
     @Override
@@ -75,12 +77,25 @@ public class PantallaJuego extends Pantalla {
                 Assets.derrota.play(1);
             estado = EstadoJuego.FinJuego;
         }
-        if(antiguaPuntuacion != mundo.puntuacion) {
+        if(antiguaPuntuacion < mundo.puntuacion) {
             antiguaPuntuacion = mundo.puntuacion;
             puntuacion = "" + antiguaPuntuacion;
             if(Configuraciones.sonidoHabilitado)
                 Assets.ataque.play(1);
         }
+        else if(antiguaPuntuacion > mundo.puntuacion || mundo.CactusCogido) {
+            antiguaPuntuacion = mundo.puntuacion;
+            puntuacion = "" + antiguaPuntuacion;
+            mundo.CactusCogido = false;
+            if(Configuraciones.sonidoHabilitado)
+                Assets.derrota.play(1);
+        }else if(antiguoNumPartes > mundo.ramo.partes.size() || mundo.CestaCogida) {
+            mundo.CestaCogida = false;
+            if(Configuraciones.sonidoHabilitado)
+                Assets.ataque.play(1);
+        }
+
+        antiguoNumPartes = mundo.ramo.partes.size();
     }
 
     private void updatePaused(List<TouchEvent> touchEvents) {
@@ -147,8 +162,8 @@ public class PantallaJuego extends Pantalla {
         RamoFlores jollyroger = mundo.ramo;
         Tripulacion head = jollyroger.partes.get(0);
         Flores botin = mundo.botin;
-
-
+        Cactus cactus = mundo.cactus;
+        Cesta cesta= mundo.cesta;
         Pixmap stainPixmap = null;
         if(botin.tipo== Flores.TIPO_1)
             stainPixmap = Assets.flor;
@@ -160,6 +175,16 @@ public class PantallaJuego extends Pantalla {
         int y = botin.y * 32;
         g.drawPixmap(stainPixmap, x, y);
 
+        if(cactus != null){
+            x = cactus.x * 32;
+            y = cactus.y * 32;
+            g.drawPixmap(Assets.cactus, x, y);
+        }
+        if(cesta != null){
+            x = cesta.x * 32;
+            y = cesta.y * 32;
+            g.drawPixmap(Assets.cesta, x, y);
+        }
         int len = jollyroger.partes.size();
         for(int i = 1; i < len; i++) {
             Tripulacion part = jollyroger.partes.get(i);

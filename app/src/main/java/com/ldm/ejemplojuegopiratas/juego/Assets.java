@@ -28,6 +28,8 @@ public class Assets {
     public static Pixmap lirio;
     public static Pixmap girasol;
 
+    public static Pixmap cesta;
+
     public static Pixmap cactus;
 
     public static Sonido pulsar;

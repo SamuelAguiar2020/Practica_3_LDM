@@ -35,6 +35,7 @@ public class LoadingScreen extends Pantalla{
         Assets.lirio = g.newPixmap("lirio.png", PixmapFormat.ARGB4444);
         Assets.girasol = g.newPixmap("girasol.png", PixmapFormat.ARGB4444);
         Assets.cactus = g.newPixmap("cactus.png", PixmapFormat.ARGB4444);
+        Assets.cesta = g.newPixmap("cesta.png", PixmapFormat.ARGB4444);
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.ataque = juego.getAudio().nuevoSonido("corte.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");

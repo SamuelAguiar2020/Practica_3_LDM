@@ -76,5 +76,11 @@ public class RamoFlores {
         }
         return false;
     }
+
+    public void dejarFlor() {
+        //if(partes.size()>0){
+        //    partes.remove(partes.size()-1);
+        //}
+    }
 }
 
